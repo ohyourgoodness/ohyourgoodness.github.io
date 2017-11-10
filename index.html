@@ -1,34 +1,383 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+  
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap-4.0.0/css/bootstrap.min.css" >
-	
+   
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+ 	<script src="index.js"></script>
+	
+	<style>
+	    .varcss{
+			--video-screen-height: 300px;
+			--contact-image-margin: 0 0 0 100px;
+		}
+		
+		.subtitle1 {
+			width:60px; 
+			height:60px;
+			font-size:20px;
+		}
+		
+		.subtitle1-ch {
+			width:200px; 
+			height:60px;
+			font-size:20px;
+		}
+
+		.font1 {
+			text-align: center; 
+			left: 50%;
+			font-size:20px;
+			face: sans-serif;
+		}
+		.font2 {
+			text-align: center; 
+			left: 50%;
+			font-size:15px;
+			face: sans-serif;
+
+		}
+
+		.sound1 {
+			width: 40px;
+			height: 40px;
+		}
+
+		.video-screen {
+			width:80%;
+			height: var(--video-screen-height);
+			display:block; 
+			margin: 0 auto;	
+		}
+
+		.video-title {
+			text-align: center; 
+			face: sans-serif;
+			font-size: 15px; 
+			font-weight: 300;
+		}
+		.profilePicCSS{
+			  -webkit-transition: opacity  ease-in-out;
+			  -moz-transition: opacity ease-in-out;
+			  -o-transition: opacity  ease-in-out;
+			  transition: opacity  ease-in-out;
+		}
+		.contactPicCSS{
+			 width:30px;
+			 height: 30px;
+		}
+		.weiboCSS{
+		
+		}
+    </style>
+	
+	
 	
   </head>
   <body>
+  
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div id  = "container-fluid" class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-left" href="#">
+		<img id = "logo"  style = "width:40px; height:40px;display: inline-block;" src="image/lili-logo.jpg" />
+	  </a>
+	  <p class="navbar-text" style = "position: absolute; left: 49%; display: inline-block; font-size: 20px; font-weight: 600;">Li Li 
+	  </p>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#musicSection" id = "nav-music">Music</a></li>
+		<li><a href="#actingSection" id = "nav-acting">Acting</a></li>
+		<li><a href="#" id = "nav-modeling">Modeling</a></li>
+		<li><a href="#" id = "nav-language">中文</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  
+<div class="container" id="english-container"> 
+    <div class="row"><!-- leave space for the navibar -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+	
     <div class="row">
-	  <div class="col-sm-6">picture</div>
-	  <div class="col-sm-6">Li Li</div>
+	  <div class="col-sm-1"></div>	 
+	  <div class="col-sm-5" id = "nameDiv" >
+	    <br><br><br><br><br><br>
+		<div style = "font-size:60px; text-align: center; left: 50%">Li Li</div>
+		<div class = "font1" > free lancer</div>
+		<div class = "font1"> music composor</div>
+		<div class = "font1"> actor</div>
+		<div class = "font1"> model</div>
+		
+		<br>
+		<div id = "contactPicDiv" style = "text-align: center;"> 
+			<img id = "ins" class = "contactPicCSS" src="image/ins.png" />
+			&nbsp;
+			&nbsp;
+			<img id = "weibo" class = "contactPicCSS" src="image/weibo.png" />
+		</div>
+		<br>
+		<div id = "contactEmailDiv" style = "text-align: center;"> 
+			<div class = "font2"> email: wishlili66@outlook.com</div>		
+		</div>
+		
+		<br>
+		<div style = "text-align: center;"> 
+			<div class = "font2"> Agenct & Partner Wanted</div>		
+		</div>
+		
+		<br><br><br>	
+	  </div>
+      <div class="col-sm-5" id = "profilePic1Div">	    
+			<img id = "profilePic" class = "profilePicCSS" style = "width:100%; height:100%" src="image/profilePic1.jpg" />
+	  </div> 	  
+	  <div class="col-sm-1"></div>
 	</div>
+	
+
+	
+	<!-- MUSIC -->
+	
+	
 	<div class="row">
-	  <div class="col-sm-2">Music Demo</div>
-	  <div class="col-sm-5">Music Demo Sound</div>
-	  <div class="col-sm-5">Music Demo Video</div>
+	  <div id = "musicSection" class="col-sm-12 subtitle1" style = "text-align: center; left: 46%"></div>	
 	</div>
+	
 	<div class="row">
-	  <div class="col-sm-2">Acting Portfolio</div>
-	  <div class="col-sm-10">Video Link</div>
+	  <div class="col-sm-12 subtitle1" style = "text-align: center; left: 46%">MUSIC</div>	
+	  <br><br><br>
 	</div>
+	
+	<div class="row">
+	  <div class="col-sm-1"></div>	
+	  <div id = "videoRow1Col1" class="col-sm-5">
+	      <iframe id = "video-panda" class = "video-screen" src="https://www.youtube.com/embed/FT3K4Ivmc2w" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">Panda</div>
+	  </div> 
+	  <div class="col-sm-5">
+		  <iframe id = "video-xiangqin" class = "video-screen" src="https://www.youtube.com/embed/ZKt5ch6Y9gE" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+	      <div class = "video-title">Ms Jin, Please Don't Ask Me To Date</div>
+	  </div> 
+	  <div class="col-sm-1"></div>	
+	</div>
+	
+	<div class="row"><!-- space -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+	
+
+	<div class="row">	
+	  <div class="col-sm-1"></div>	
+	  <div class="col-sm-5">
+	      <iframe id = "video-lilian" class = "video-screen" src="https://www.youtube.com/embed/tr1VItjnYkU" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">Miss Li Li An</div>
+	  </div> 
+	  <div class="col-sm-5">
+	      <iframe id = "video-tremble" class = "video-screen" src="https://www.youtube.com/embed/FNXFD-0tzv4" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">Tremble (EDM)</div>
+	  </div>
+	  <div class="col-sm-1"></div>	
+	</div>  
+	
+	<div class="row"><!-- leave space for the navibar -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+	
+	
+	<div class="row">	
+	  <div class="col-sm-1"></div>	
+	  <div class="col-sm-5">
+	      <iframe id = "video-royal" class = "video-screen" src="https://www.youtube.com/embed/oGQsty_gtZY" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">I Cannot Be Royal</div>
+	  </div>
+	  <div class="col-sm-5">
+		  <iframe id = "video-playlist" class = "video-screen" src="https://www.youtube.com/embed/videoseries?list=PLy6pBeZUpoav9veOakh2Yv6fVx2rIkniI" frameborder="0" gesture="media" allowfullscreen></iframe>
+		  <br>
+	  </div>
+	  <div class="col-sm-1"></div>	
+	</div> 
+
+	
+	<!-- ACTING -->
+	
+    <div class="row">
+	  <div id = "actingSection" class="col-sm-12 subtitle1" style = "text-align: center; left: 46%"></div>	
+	</div>
+	
+	<div class="row">
+	  <div class="col-sm-12 subtitle1" style = "text-align: center; left: 46%">ACTING</div>	
+	  <br><br><br>
+	</div>
+	
+	<div class="row">	
+	  <div class="col-sm-1"></div>	
+	  <div class="col-sm-5">
+	      <iframe id = "video-mv" class = "video-screen" src="https://www.youtube.com/embed/m7phyitMYSE" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">Male Lead -  Marcus </div>
+	  </div> 
+	  <div class="col-sm-5">
+	      <iframe id = "video-zuichibi" class = "video-screen" src="https://www.youtube.com/embed/kHP4JlPHRyY" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">Male Lead - Zhu Ge Liang</div>
+	  </div>
+	  <div class="col-sm-1"></div>	
+	</div>  
+	
+	<div class="row"><!-- space -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+	
+	
+</div>
+
+
+<div class="container" id="chinese-container" style = "display : none">
+    <div class="row"><!-- leave space for the navibar -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+	
+    <div class="row">
+	  <div class="col-sm-1"></div>	 
+	  <div class="col-sm-5" id = "nameDiv-ch" >
+	    <br><br><br><br><br><br>
+		<div style = "font-size:60px; text-align: center; left: 50%">李礼</div>
+		<div class = "font1" > 自由职业</div>
+		<div class = "font1"> 词曲创作 编曲和声</div>
+		<div class = "font1"> 歌手 演员</div>
+		<div class = "font1"> 模特</div>
+		<br>
+		<div id = "contactPicDiv" style = "text-align: center;"> 
+			<img id = "ins" class = "contactPicCSS" src="image/ins.png" />
+			&nbsp;
+			&nbsp;
+			<img id = "weibo" class = "contactPicCSS" src="image/weibo.png" />
+		</div>
+		<br>
+		<div id = "contactEmailDiv" style = "text-align: center;"> 
+			<div class = "font2"> 邮箱: wishlili66@outlook.com</div>		
+		</div>
+		
+		<br>
+		<div style = "text-align: center;"> 
+			<div class = "font2"> 演艺经纪公司 音乐经纪公司 待签约</div>		
+		</div>
+		
+		<br><br><br>		
+	  </div>
+      <div class="col-sm-5" id = "profilePic1Div-ch">	    
+			<img id = "profilePic-ch" class = "profilePicCSS" style = "width:100%; height:100%" src="image/profilePic1.jpg" />
+	  </div> 	  
+	  <div class="col-sm-1"></div>
+	</div>
+	
+	
+	<!-- MUSIC -->
+	<div class="row">
+	  <div id = "musicSection-ch" class="col-sm-12 subtitle1" style = "text-align: center; left: 46%"></div>	
+	</div>
+	
+	<div class="row">
+	  <div class="col-sm-12 subtitle1-ch" style = "text-align: center; left: 41%">原创音乐</div>	
+	  <br><br><br>
+	</div>
+	
+	<div class="row">
+	  <div class="col-sm-1"></div>	
+	  <div id = "videoRow1Col1-ch" class="col-sm-5">
+	      <iframe id = "video-panda-ch" class = "video-screen" src='http://player.youku.com/embed/XMzE0ODA5ODU2MA==' frameborder="0" allowfullscreen></iframe>  
+	      <!-- 
+	      <iframe id = "video-panda" class = "video-screen" src="http://video.weibo.com/show?fid=1034%3A550e606ead7d03dc55e74d6f9d2bbb90&luicode=20000061&lfid=4166045302617066" frameborder="0" allowfullscreen></iframe>  
+		  -->
+		  <br>
+		  <div class = "video-title">熊猫</div>
+	  </div> 
+	  <div class="col-sm-5">
+		  <iframe id = "video-xiangqin-ch" class = "video-screen" src='http://player.youku.com/embed/XMjc2OTgwNzc5Mg==' frameborder="0" allowfullscreen></iframe>
+		  <br>
+	      <div class = "video-title">金姐，别再催我去相亲</div>
+	  </div> 
+	  <div class="col-sm-1"></div>	
+	</div>
+	
+	<div class="row"><!-- leave space for the navibar -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+	
+	
+		<!-- ACTING -->
+    <div class="row">
+	  <div id = "actingSection-ch" class="col-sm-12 subtitle1" style = "text-align: center; left: 46%"></div>	
+	</div>
+	
+	<div class="row">
+	  <div class="col-sm-12 subtitle1-ch" style = "text-align: center; left: 41%">表演作品</div>	
+	  <br><br><br>
+	</div>
+	
+	<div class="row">	
+	  <div class="col-sm-1"></div>	
+	  <div class="col-sm-5">
+	      <iframe id = "video-mv-ch" class = "video-screen" src="http://player.youku.com/embed/XMzE0ODA0Mjg4OA==" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">男一号 ：Marcus </div>
+	  </div> 
+	  <div class="col-sm-5">
+	      <iframe id = "video-zuichibi-ch" class = "video-screen" src="http://player.youku.com/embed/XMzE0ODA2MDg0MA==" frameborder="0" allowfullscreen></iframe>  
+		  <br>
+		  <div class = "video-title">男一号 ：诸葛亮</div>
+	  </div>
+	  <div class="col-sm-1"></div>	
+	</div>  
+	
+	<div class="row"><!-- space -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+
+
+
+
+
+	
+</div>
+
+
   </body>
 </html>
