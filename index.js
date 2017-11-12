@@ -23,17 +23,17 @@ $( document ).ready(function() {
 	
 	setInterval(function() {
 		 var curSrc= $("#profilePic-ch").attr("src");
-		 if(curSrc === "image/profilePic1.jpg"){
+		 if(curSrc === "image/profilePic1.JPG"){
 			 
 			$("#profilePic-ch").fadeOut(400, function() {
-				$("#profilePic-ch").attr('src',"image/profilePic2.jpg");
+				$("#profilePic-ch").attr('src',"image/profilePic2.JPG");
 			}).fadeIn(400);
-		 }else if(curSrc === "image/profilePic2.jpg"){
+		 }else if(curSrc === "image/profilePic2.JPG"){
 			$("#profilePic-ch").fadeOut(400, function() {
-				$("#profilePic-ch").attr('src',"image/profilePic1.jpg");
+				$("#profilePic-ch").attr('src',"image/profilePic1.JPG");
 			}).fadeIn(400);
 		 }else{
-			 $("#profilePic-ch").attr("src", "image/profilePic1.jpg");
+			 $("#profilePic-ch").attr("src", "image/profilePic1.JPG");
 		 }
 		 
 		  
