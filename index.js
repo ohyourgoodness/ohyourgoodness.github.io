@@ -3,17 +3,17 @@ $( document ).ready(function() {
 	
 	setInterval(function() {
 		 var curSrc= $("#profilePic").attr("src");
-		 if(curSrc === "image/profilePic1.jpg"){
+		 if(curSrc === "http://www.liliwish.com/image/profilePic1.jpg"){
 			 
 			$("#profilePic").fadeOut(400, function() {
-				$("#profilePic").attr('src',"image/profilePic2.jpg");
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic2.jpg");
 			}).fadeIn(400);
-		 }else if(curSrc === "image/profilePic2.jpg"){
+		 }else if(curSrc === "http://www.liliwish.com/image/profilePic2.jpg"){
 			$("#profilePic").fadeOut(400, function() {
-				$("#profilePic").attr('src',"image/profilePic1.jpg");
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic1.jpg");
 			}).fadeIn(400);
 		 }else{
-			 $("#profilePic").attr("src", "image/profilePic1.jpg");
+			 $("#profilePic").attr("src", "http://www.liliwish.com/image/profilePic1.jpg");
 		 }
 		 
 		  
