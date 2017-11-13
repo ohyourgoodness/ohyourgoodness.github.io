@@ -28,7 +28,7 @@
 	
 	<style>
 	    .varcss{
-			--video-screen-height: 300px;
+			--video-screen-height: 100%;
 			--contact-image-margin: 0 0 0 100px;
 		}
 		
@@ -57,6 +57,14 @@
 			face: sans-serif;
 
 		}
+		
+		.font3 {
+			text-align: center; 
+			left: 50%;
+			font-size:15px;
+			face: sans-serif;
+
+		}
 
 		.sound1 {
 			width: 40px;
@@ -76,6 +84,8 @@
 			font-size: 15px; 
 			font-weight: 300;
 		}
+		
+		
 		.profilePicCSS{
 			  -webkit-transition: opacity  ease-in-out;
 			  -moz-transition: opacity ease-in-out;
@@ -89,6 +99,142 @@
 		.weiboCSS{
 		
 		}
+		
+		
+		.youtube {
+			background-color: #000;
+			margin-bottom: 30px;
+			position: relative;
+			padding-top: 56.25%;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.youtube img {
+			width: 100%;
+			top: -16.84%;
+			left: 0;
+			opacity: 0.7;
+		}
+		.youtube .play-button {
+			width: 90px;
+			height: 60px;
+			background-color: #333;
+			box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+			z-index: 1;
+			opacity: 0.8;
+			border-radius: 6px;
+		}
+		.youtube .play-button:before {
+			content: "";
+			border-style: solid;
+			border-width: 15px 0 15px 26.0px;
+			border-color: transparent transparent transparent #fff;
+		}
+		.youtube img,
+		.youtube .play-button {
+			cursor: pointer;
+		}
+		.youtube img,
+		.youtube iframe,
+		.youtube .play-button,
+		.youtube .play-button:before {
+			position: absolute;
+		}
+		.youtube .play-button,
+		.youtube .play-button:before {
+			top: 50%;
+			left: 50%;
+			transform: translate3d( -50%, -50%, 0 );
+		}
+		.youtube iframe {
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+		
+		.video-list-screen {
+			top: 0;
+			left: 0;
+		}
+		
+		
+        .youkuCSS {
+			--iframe-width:100%;
+			--iframe-width:100%;
+		}
+
+		.youku {
+			background-color: #000;
+			margin-bottom: 30px;
+			position: relative;
+			width : var(--iframe-width) ;	
+		    height: var(--iframe-height);			
+			overflow: hidden;
+			cursor: pointer;	
+			text-align: center			
+		}
+		
+		.youku img {
+			width: 100%;
+			left: 0;
+			opacity: 0.7;
+		}
+		
+		.youku-video {
+			width: 100%;
+			left: 0;
+			opacity: 0.7;
+		}
+		
+		.youku .play-button {
+			width: 90px;
+			height: 60px;
+			background-color: #333;
+			box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+			z-index: 1;
+			opacity: 0.8;
+			border-radius: 6px;
+		}
+		.youku .play-button:before {
+			content: "";
+			border-style: solid;
+			border-width: 15px 0 15px 26.0px;
+			border-color: transparent transparent transparent #fff;
+		}
+
+		.youku .play-button {
+			cursor: pointer;
+		}
+
+		.youku .play-button,
+		.youku .play-button:before {
+			position: absolute;
+		}
+		.youku .play-button,
+		.youku .play-button:before {
+			top: 50%;
+			left: 50%;
+			transform: translate3d( -50%, -50%, 0 );
+		}
+		
+		
+		.youku-iframe {
+			background-color: #000;
+			margin-bottom: 30px;
+			position: relative;
+			width : var(--iframe-width) ;	
+		    height: var(--iframe-height);		
+			overflow: hidden;
+			cursor: pointer;	
+			text-align: center			
+		}
+		
+		
+		
+		
+		
+		
     </style>
 	
 	
@@ -155,7 +301,7 @@
 		
 		<br>
 		<div style = "text-align: center;"> 
-			<div class = "font2"> Agenct & Partner Wanted</div>		
+			<div class = "font2"> Agent & Partner Wanted</div>		
 		</div>
 		
 		<br><br><br>	
@@ -166,6 +312,8 @@
 	  <div class="col-sm-1"></div>
 	</div>
 	
+	
+
 
 	
 	<!-- MUSIC -->
@@ -180,17 +328,24 @@
 	  <br><br><br>
 	</div>
 	
+	
 	<div class="row">
-	  <div class="col-sm-1"></div>	
-	  <div id = "videoRow1Col1" class="col-sm-5">
-	      <iframe id = "video-panda" class = "video-screen" src="https://www.youtube.com/embed/FT3K4Ivmc2w" frameborder="0" allowfullscreen></iframe>  
-		  <br>
-		  <div class = "video-title">Panda</div>
+	  <div  class="col-sm-1"></div>	
+	 
+      <div id = "gridWidth" class="col-sm-5">
+	  <br><br><br>
+	        <div class = "font1"> Philosophy, Nature and Joy </div>
+			<div class = "font3"> —— Li Li'music. </div>
+	        <div class = "font3"> Melogy inspired by Chinese traditional instruments, especially Pentatonic scales</div>
+			<div class = "font3"> Lyric inspired by Philosophy from life and Nature from space </div>	
+            <div class = "font3"> Instrumental composed from Computer Software entirely, you don't have to know how to play piano and guitar to compose </div>					
 	  </div> 
-	  <div class="col-sm-5">
-		  <iframe id = "video-xiangqin" class = "video-screen" src="https://www.youtube.com/embed/ZKt5ch6Y9gE" frameborder="0" allowfullscreen></iframe>  
+	   <div  class="col-sm-5">
+	      <div id = "video-royal" class = "youtube" data-embed="oGQsty_gtZY">
+			<div class="play-button"></div> 
+		  </div>  
 		  <br>
-	      <div class = "video-title">Ms Jin, Please Don't Ask Me To Date</div>
+		  <div class = "video-title">I Cannot Be Royal</div>
 	  </div> 
 	  <div class="col-sm-1"></div>	
 	</div>
@@ -199,42 +354,58 @@
 	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
 	</div>
 	
-
-	<div class="row">	
+	
+	
+	
+	<div class="row">
 	  <div class="col-sm-1"></div>	
-	  <div class="col-sm-5">
-	      <iframe id = "video-lilian" class = "video-screen" src="https://www.youtube.com/embed/tr1VItjnYkU" frameborder="0" allowfullscreen></iframe>  
+	  <div  class="col-sm-5">
+	      <div id = "video-panda" class = "youtube" data-embed="FT3K4Ivmc2w">
+			<div class="play-button"></div> 
+		  </div>  
 		  <br>
-		  <div class = "video-title">Miss Li Li An</div>
+		  <div class = "video-title">Panda</div>
 	  </div> 
 	  <div class="col-sm-5">
-	      <iframe id = "video-tremble" class = "video-screen" src="https://www.youtube.com/embed/FNXFD-0tzv4" frameborder="0" allowfullscreen></iframe>  
+	      <div id = "video-xiangqin" class = "youtube" data-embed="ZKt5ch6Y9gE">
+		    <div class="play-button"></div> 
+		  </div>  
 		  <br>
-		  <div class = "video-title">Tremble (EDM)</div>
-	  </div>
+	      <div class = "video-title">Ms Jin, Please Don't Ask Me To Date</div>
+	  </div> 
 	  <div class="col-sm-1"></div>	
-	</div>  
+	</div>
 	
-	<div class="row"><!-- leave space for the navibar -->
+    <div class="row"><!-- space -->
 	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
 	</div>
 	
 	
-	<div class="row">	
-	  <div class="col-sm-1"></div>	
-	  <div class="col-sm-5">
-	      <iframe id = "video-royal" class = "video-screen" src="https://www.youtube.com/embed/oGQsty_gtZY" frameborder="0" allowfullscreen></iframe>  
-		  <br>
-		  <div class = "video-title">I Cannot Be Royal</div>
-	  </div>
-	  <div class="col-sm-5">
-		  <iframe id = "video-playlist" class = "video-screen" src="https://www.youtube.com/embed/videoseries?list=PLy6pBeZUpoav9veOakh2Yv6fVx2rIkniI" frameborder="0" gesture="media" allowfullscreen></iframe>
-		  <br>
-	  </div>
-	  <div class="col-sm-1"></div>	
-	</div> 
-
 	
+	<div class="row">
+	  <div class="col-sm-1"></div>	
+	  <div  class="col-sm-5">
+	      <div id = "video-lilian" class = "youtube" data-embed="tr1VItjnYkU">
+			<div class="play-button"></div> 
+		  </div>  
+		  <br>
+		  <div class = "video-title">Miss Li Li An</div>
+	  </div> 
+	  <div class="col-sm-5">
+	      <div id = "video-tremble" class = "youtube" data-embed="FNXFD-0tzv4">
+		    <div class="play-button"></div> 
+		  </div>  
+		  <br>
+	      <div class = "video-title">Tremble (EDM)</div>
+	  </div> 
+	  <div class="col-sm-1"></div>	
+	</div>
+	
+	<div class="row"><!-- space -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+
+
 	<!-- ACTING -->
 	
     <div class="row">
@@ -246,25 +417,30 @@
 	  <br><br><br>
 	</div>
 	
-	<div class="row">	
+	
+	<div class="row">
 	  <div class="col-sm-1"></div>	
-	  <div class="col-sm-5">
-	      <iframe id = "video-mv" class = "video-screen" src="https://www.youtube.com/embed/m7phyitMYSE" frameborder="0" allowfullscreen></iframe>  
+	  <div  class="col-sm-5">
+	      <div id = "video-mv" class = "youtube" data-embed="m7phyitMYSE">
+			<div class="play-button"></div> 
+		  </div>  
 		  <br>
-		  <div class = "video-title">Male Lead -  Marcus </div>
+		  <div class = "video-title">Male Lead -  Marcus</div>
 	  </div> 
 	  <div class="col-sm-5">
-	      <iframe id = "video-zuichibi" class = "video-screen" src="https://www.youtube.com/embed/kHP4JlPHRyY" frameborder="0" allowfullscreen></iframe>  
+	      <div id = "video-zuichibi" class = "youtube" data-embed="kHP4JlPHRyY">
+		    <div class="play-button"></div> 
+		  </div>  
 		  <br>
-		  <div class = "video-title">Male Lead - Zhu Ge Liang</div>
-	  </div>
+	      <div class = "video-title">Male Lead - Zhu Ge Liang</div>
+	  </div> 
 	  <div class="col-sm-1"></div>	
-	</div>  
+	</div>
 	
 	<div class="row"><!-- space -->
 	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
 	</div>
-	
+
 	
 </div>
 
@@ -319,25 +495,34 @@
 	  <br><br><br>
 	</div>
 	
-	<div class="row">
+	
+    <div class="row">
 	  <div class="col-sm-1"></div>	
 	  <div id = "videoRow1Col1-ch" class="col-sm-5">
-	      <iframe id = "video-panda-ch" class = "video-screen" src='http://player.youku.com/embed/XMzE0ODA5ODU2MA==' frameborder="0" allowfullscreen></iframe>  
-	      <!-- 
-	      <iframe id = "video-panda" class = "video-screen" src="http://video.weibo.com/show?fid=1034%3A550e606ead7d03dc55e74d6f9d2bbb90&luicode=20000061&lfid=4166045302617066" frameborder="0" allowfullscreen></iframe>  
-		  -->
+	      <div id = "video-panda-ch" class = "youku">
+		     <div id = "video-panda-ch-playbutton" class="play-button"></div> 
+		     <img id = "video-panda-ch-thumbnail" src="http://www.liliwish.com/image/panda-thumbnail.png" data-video="http://player.youku.com/embed/XMzE0ODA5ODU2MA==" />			 
+		  </div> 
+		     <iframe id = "video-panda-ch-youku" class = "youku-iframe " style = "display: none" src='' frameborder="0" allowfullscreen></iframe> 			
 		  <br>
 		  <div class = "video-title">熊猫</div>
 	  </div> 
-	  <div class="col-sm-5">
-		  <iframe id = "video-xiangqin-ch" class = "video-screen" src='http://player.youku.com/embed/XMjc2OTgwNzc5Mg==' frameborder="0" allowfullscreen></iframe>
+	  
+	  <div id = "videoRow1Col2-ch" class="col-sm-5">
+	      <div id = "video-xiangqin-ch" class = "youku">
+		     <div id = "video-xiangqin-ch-playbutton" class="play-button"></div> 
+		     <img id = "video-xiangqin-ch-thumbnail" src="http://www.liliwish.com/image/xiangqin-thumbnail.png" data-video="http://player.youku.com/embed/XMzE0Nzg5Njc3Mg==" />			 
+		  </div> 
+		  <iframe id = "video-xiangqin-ch-youku" class = "youku-iframe " style = "display: none" src='' frameborder="0" allowfullscreen></iframe> 			
 		  <br>
-	      <div class = "video-title">金姐，别再催我去相亲</div>
+		  <div class = "video-title">金姐，别再催我去相亲</div>
 	  </div> 
+	  
+	  
 	  <div class="col-sm-1"></div>	
 	</div>
 	
-	<div class="row"><!-- leave space for the navibar -->
+	<div class="row"><!-- space -->
 	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
 	</div>
 	
@@ -352,30 +537,46 @@
 	  <br><br><br>
 	</div>
 	
-	<div class="row">	
+	
+	
+	
+	<div class="row">
 	  <div class="col-sm-1"></div>	
-	  <div class="col-sm-5">
-	      <iframe id = "video-mv-ch" class = "video-screen" src="http://player.youku.com/embed/XMzE0ODA0Mjg4OA==" frameborder="0" allowfullscreen></iframe>  
+	  <div id = "videoRow2Col1-ch" class="col-sm-5">
+	      <div id = "video-mv-ch" class = "youku">
+		     <div id = "video-mv-ch-playbutton" class="play-button"></div> 
+		     <img id = "video-mv-ch-thumbnail" src="http://www.liliwish.com/image/mv-thumbnail.png" data-video="http://player.youku.com/embed/XMzE0ODA0Mjg4OA==" />			 
+		  </div> 
+		     <iframe id = "video-mv-ch-youku" class = "youku-iframe " style = "display: none" src='' frameborder="0" allowfullscreen></iframe> 			
 		  <br>
-		  <div class = "video-title">男一号 ：Marcus </div>
+		  <div class = "video-title">男一号 ：Marcus</div>
 	  </div> 
-	  <div class="col-sm-5">
-	      <iframe id = "video-zuichibi-ch" class = "video-screen" src="http://player.youku.com/embed/XMzE0ODA2MDg0MA==" frameborder="0" allowfullscreen></iframe>  
+	  
+	  <div id = "videoRow2Col2-ch" class="col-sm-5">
+	      <div id = "video-zuichibi-ch" class = "youku">
+		     <div id = "video-zuichibi-ch-playbutton" class="play-button"></div> 
+		     <img id = "video-zuichibi-ch-thumbnail" src="http://www.liliwish.com/image/zuichibi-thumbnail.png" data-video="http://player.youku.com/embed/XMzE0ODA2MDg0MA==" />			 
+		  </div> 
+		  <iframe id = "video-zuichibi-ch-youku" class = "youku-iframe " style = "display: none" src='' frameborder="0" allowfullscreen></iframe> 			
 		  <br>
 		  <div class = "video-title">男一号 ：诸葛亮</div>
-	  </div>
+	  </div> 
+	  
+	  
 	  <div class="col-sm-1"></div>	
-	</div>  
+	</div>
+	
+	<div class="row"><!-- space -->
+	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
+	</div>
+	
+
 	
 	<div class="row"><!-- space -->
 	  <div class="col-sm-12" style = "width:100%; height: 40px;"></div>	 
 	</div>
 
 
-
-
-
-	
 </div>
 
 
