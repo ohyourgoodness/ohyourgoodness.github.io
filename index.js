@@ -25,10 +25,12 @@ $( document ).ready(function() {
 				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic6.JPG");
 			}).fadeIn(400);
 		 }else{
-			 $("#profilePic").attr("src", "http://www.liliwish.com/image/profilePic1.JPG");
+			$("#profilePic").fadeOut(400, function() {
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic1.JPG");
+			}).fadeIn(400);
 		 }
 
-	}, 3000);
+	}, 5000);
 	
 	
 	
@@ -51,15 +53,13 @@ $( document ).ready(function() {
 			$("#lifePic").fadeOut(400, function() {
 				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic5.JPG");
 			}).fadeIn(400);
-		 }else if(curSrc === "http://www.liliwish.com/image/lifePic5.JPG"){
-			$("#lifePic").fadeOut(400, function() {
-				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic6.JPG");
-			}).fadeIn(400);
 		 }else{
-			 $("#lifePic").attr("src", "http://www.liliwish.com/image/lifePic1.JPG");
+			$("#lifePic").fadeOut(400, function() {
+				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic1.JPG");
+			}).fadeIn(400);
 		 }
 
-	}, 3000);
+	}, 5000);
 	
 	
 	
