@@ -39,7 +39,7 @@ $( document ).ready(function() {
 		 if(curSrc === "http://www.liliwish.com/image/lifePic1.JPG"){
 			 
 			$("#lifePic").fadeOut(400, function() {
-				$("#profilePic").attr('src',"http://www.liliwish.com/image/lifePic2.JPG");
+				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic2.JPG");
 			}).fadeIn(400);
 		 }else if(curSrc === "http://www.liliwish.com/image/lifePic2.JPG"){
 			$("#lifePic").fadeOut(400, function() {
