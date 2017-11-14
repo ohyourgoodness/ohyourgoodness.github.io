@@ -10,14 +10,56 @@ $( document ).ready(function() {
 			}).fadeIn(400);
 		 }else if(curSrc === "http://www.liliwish.com/image/profilePic2.JPG"){
 			$("#profilePic").fadeOut(400, function() {
-				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic1.JPG");
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic3.JPG");
+			}).fadeIn(400);
+		 }else if(curSrc === "http://www.liliwish.com/image/profilePic3.JPG"){
+			$("#profilePic").fadeOut(400, function() {
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic4.JPG");
+			}).fadeIn(400);
+		 }else if(curSrc === "http://www.liliwish.com/image/profilePic4.JPG"){
+			$("#profilePic").fadeOut(400, function() {
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic5.JPG");
+			}).fadeIn(400);
+		 }else if(curSrc === "http://www.liliwish.com/image/profilePic5.JPG"){
+			$("#profilePic").fadeOut(400, function() {
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/profilePic6.JPG");
 			}).fadeIn(400);
 		 }else{
 			 $("#profilePic").attr("src", "http://www.liliwish.com/image/profilePic1.JPG");
 		 }
-		 
-		  
-	}, 5000);
+
+	}, 3000);
+	
+	
+	
+	setInterval(function() {
+		 var curSrc= $("#lifePic").attr("src");
+		 if(curSrc === "http://www.liliwish.com/image/lifePic1.JPG"){
+			 
+			$("#lifePic").fadeOut(400, function() {
+				$("#profilePic").attr('src',"http://www.liliwish.com/image/lifePic2.JPG");
+			}).fadeIn(400);
+		 }else if(curSrc === "http://www.liliwish.com/image/lifePic2.JPG"){
+			$("#lifePic").fadeOut(400, function() {
+				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic3.JPG");
+			}).fadeIn(400);
+		 }else if(curSrc === "http://www.liliwish.com/image/lifePic3.JPG"){
+			$("#lifePic").fadeOut(400, function() {
+				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic4.JPG");
+			}).fadeIn(400);
+		 }else if(curSrc === "http://www.liliwish.com/image/lifePic4.JPG"){
+			$("#lifePic").fadeOut(400, function() {
+				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic5.JPG");
+			}).fadeIn(400);
+		 }else if(curSrc === "http://www.liliwish.com/image/lifePic5.JPG"){
+			$("#lifePic").fadeOut(400, function() {
+				$("#lifePic").attr('src',"http://www.liliwish.com/image/lifePic6.JPG");
+			}).fadeIn(400);
+		 }else{
+			 $("#lifePic").attr("src", "http://www.liliwish.com/image/lifePic1.JPG");
+		 }
+
+	}, 3000);
 	
 	
 	
@@ -39,9 +81,7 @@ $( document ).ready(function() {
 		  
 	}, 5000);
 	
-	
-	
-	
+
 	$( "#nav-language" ).click(function() {
 		
 		$( "#chinese-container" ).toggle();
@@ -63,8 +103,6 @@ $( document ).ready(function() {
 				}
 			}
 			
-			
-			
 		}else{
 			$( "#nav-music" ).html("Music");
 			$( "#nav-acting" ).html("Acting");
@@ -73,32 +111,16 @@ $( document ).ready(function() {
 			
 			$("#nav-music").attr("href", "#musicSection");
 			$("#nav-acting").attr("href", "#actingSection");
+
 			
-			
-			
-			
-		/*	
-		
-		
-						$("#video-panda-ch-youku").attr('src',''); 
+		/*	$("#video-panda-ch-youku").attr('src',''); 
 			$('#video-panda-ch-playbutton').show();
 		    $('#video-panda-ch-thumbnail').show();
 		    $('#video-panda-ch').show();
-            $("#video-panda-ch-youku").hide();
-			
-			
-						$("#video-xiangqin-ch-youku").attr('src',''); 
-			$('#video-xiangqin-ch-playbutton').show();
-		    $('#video-xiangqin-ch-thumbnail').show();
-		    $('#video-xiangqin-ch').show();
-            $("#video-xiangqin-ch-youku").hide();
+            $("#video-panda-ch-youku").hide();			
+		*/
 
 
-			
-*/
-
-
-		
 			var youku = document.querySelectorAll( ".youku" );
 	
 			for (var i = 0; i < youku.length; i++) {
@@ -112,10 +134,7 @@ $( document ).ready(function() {
 				$('#' + youku[i].id + '-youku').hide();
 
 			}
-			
 
-			
-	
 		}
 		 
 	});
@@ -124,78 +143,13 @@ $( document ).ready(function() {
 	//resize the logo size to fit the navibar, the original logo size must be set smaller than the default navibar size.
 	var navbar = document.getElementById('container-fluid');
 	var navibarH = $('#container-fluid').outerHeight(true);
-	
-	var a4 = document.getElementById("logo").style.width;
+
 	
     document.getElementById("logo").style.height = (navibarH).toString() + "px";
 	document.getElementById("logo").style.width = (navibarH).toString() + "px";
 	document.getElementById("logo").style.left = (0).toString() + "px";
 	
 	
-	
-	
-	
-	
-	//reposition the "name and introduction" section.
-	//var profilePic1Div = document.getElementById('profilePic1Div');
-	//var profilePic1DivH = $('#profilePic1Div').outerHeight(true);
-	//var profilePic1DivW = $('#profilePic1Div').outerWidth(true);
-	//document.getElementById("nameDiv").style.left = (profilePic1DivW * 0.25).toString() + "px";
-	//document.getElementById("nameDiv").style.top = (profilePic1DivH * 0.3 ).toString() + "px";
-	
-	//change the video size
-	/*
-	var videoRow1Col1DivW = $('#videoRow1Col1').outerWidth(true);
-	document.getElementById("video-panda").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-xiangqin").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-lilian").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-royal").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-tremble").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-playlist").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));	
-	
-	document.getElementById("video-mv").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-zuichibi").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	
-
-	document.getElementById("video-panda-ch").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-xiangqin-ch").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-
-	
-	document.getElementById("video-mv-ch").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	document.getElementById("video-zuichibi-ch").style.setProperty('--video-screen-height', ((videoRow1Col1DivW * 0.6 * 0.8).toString() + "px"));
-	*/
-	
-	
-	
-
-
-	
-	//$('#video-panda-ch-thumbnail').width(gridWidth);
-	//$('#video-panda-ch-thumbnail').height(gridWidth/1.77);
-	//$('#video-panda-ch-thumbnail').css({'width' : videoRow1Col1DivW.toString() + 'px' , 'height' : (videoRow1Col1DivW/1.77).toString() + 'px'});
-	//$('#video-xiangqin-ch-thumbnail').css({'width' : videoRow1Col1DivW.toString() + 'px' , 'height' : (videoRow1Col1DivW/1.77).toString() + 'px'});
-	
-	
-	var gridWidth = $('#gridWidth').outerWidth(true);
-	
-	console.log("gridWidth = " + gridWidth);
-	
-	var gridWidthChNew = gridWidth * 0.9;
-	
-	var youku = document.querySelectorAll( ".youku" );
-	
-	for (var i = 0; i < youku.length; i++) {	
-		document.getElementById(youku[i].id).style.setProperty('--iframe-width', ((gridWidthChNew).toString() + "px"));
-		document.getElementById(youku[i].id).style.setProperty('--iframe-height', ((gridWidthChNew / 1.77).toString() + "px"));
-
-		document.getElementById(youku[i].id + "-youku").style.setProperty('--iframe-width', ((gridWidthChNew).toString() + "px"));
-		document.getElementById(youku[i].id + "-youku").style.setProperty('--iframe-height', ((gridWidthChNew / 1.77).toString() + "px"));
-	}
-			
-			
-
-
-
 	
 	$("#ins").click(function(){
 		console.log("Open ins");
@@ -255,10 +209,24 @@ $( document ).ready(function() {
 	
 	
 	
+	var gridWidth = $('#gridWidth').outerWidth(true);
 	
+	console.log("gridWidth = " + gridWidth);
+	
+	var gridWidthChNew = gridWidth * 0.9;
+	
+	var youku = document.querySelectorAll( ".youku" );
+	
+	for (var i = 0; i < youku.length; i++) {	
+		document.getElementById(youku[i].id).style.setProperty('--iframe-width', ((gridWidthChNew).toString() + "px"));
+		document.getElementById(youku[i].id).style.setProperty('--iframe-height', ((gridWidthChNew / 1.77).toString() + "px"));
 
-	
-	
+		document.getElementById(youku[i].id + "-youku").style.setProperty('--iframe-width', ((gridWidthChNew).toString() + "px"));
+		document.getElementById(youku[i].id + "-youku").style.setProperty('--iframe-height', ((gridWidthChNew / 1.77).toString() + "px"));
+	}
+		
+		
+
 	
 	for (var i = 0; i < youku.length; i++) {
 
@@ -273,68 +241,7 @@ $( document ).ready(function() {
 		} );
 	
 	}
-	
-	/*
-	 $('#video-panda-ch-playbutton').click(function(){
-		   $('#video-panda-ch-playbutton').hide();
-		   $('#video-panda-ch-thumbnail').hide();
-		   $('#video-panda-ch').hide();
-		   
-		   $("#video-panda-ch-youku").attr('src',$('#video-panda-ch-thumbnail').attr('data-video'));  
-		   $("#video-panda-ch-youku").show();
-		  
-	 });
-	 
-	 
-	 			setInterval(function() {
-					  
-					 $('#video-panda-youku-ch').click(); 
-					 var position = $('#video-panda-youku-ch').offset();
-					 document.elementFromPoint((position.left + 50).toString() + "px", (position.top + 50).toString() + "px").click();
-					  
-				}, 5000);
 
- */
-
-	
-	
-	/*	
-	var youku = document.querySelectorAll( ".youku" );
-	for (var i = 0; i < youku.length; i++) {
- 
-		// thumbnail image source.http://events.youku.com/global/api/video-thumb.php?vid=XNDk5OTE4MTAw
-		var source = "http://events.youku.com/global/api/video-thumb.php?vid="+ youku[i].dataset.embed; 
- 
- 
-        var image = new Image();
-        image.src = source;
-        image.addEventListener( "load", function() {
-            youku[ i ].appendChild( image );
-        }( i ) );
-		
-		
-		 youku[i].addEventListener( "click", function() {
- 
-        var iframe = document.createElement( "iframe" );
- 
-            iframe.setAttribute( "frameborder", "0" );
-            iframe.setAttribute( "allowfullscreen", "" );
-            iframe.setAttribute( "src", "http://player.youku.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
- 
-            this.innerHTML = "";
-            this.appendChild( iframe );
-		} );
-	
-	}
-
-	
-	*/
-	
-	
-	
-	
-	
-	
 
 	
 });
