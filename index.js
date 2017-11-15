@@ -94,6 +94,8 @@ $( document ).ready(function() {
 			$( "#nav-modeling" ).html("模特");
 			$( "#nav-language" ).html("English");
 			
+			
+			$("#nav-me").attr("href", "#meSection-ch");
 			$("#nav-music").attr("href", "#musicSection-ch");
 			$("#nav-acting").attr("href", "#actingSection-ch");
 			
@@ -111,6 +113,7 @@ $( document ).ready(function() {
 			$( "#nav-modeling" ).html("Modeling");
 			$( "#nav-language" ).html("中文");
 			
+			$("#nav-me").attr("href", "#meSection");
 			$("#nav-music").attr("href", "#musicSection");
 			$("#nav-acting").attr("href", "#actingSection");
 
@@ -154,7 +157,6 @@ $( document ).ready(function() {
 	
 	
 	$("#ins").click(function(){
-		console.log("Open ins");
 		var win = window.open('https://www.instagram.com/liliwish/', '_blank');
 		win.focus();
 	});
@@ -164,8 +166,7 @@ $( document ).ready(function() {
 	});
 	
 	$("#weibo").click(function(){
-		console.log("Open weibo");
-		var win = window.open('https://www.instagram.com/liliwish/', '_blank');
+		var win = window.open('https://weibo.com/liliwish/', '_blank');
 		win.focus();
 	});
 	
@@ -173,6 +174,41 @@ $( document ).ready(function() {
 		this.style.cursor = 'pointer'
 	});
 	
+	$("#youtube").click(function(){
+		var win = window.open('https://youtu.be/ZKt5ch6Y9gE/', '_blank');
+		win.focus();
+	});
+	
+	$("#youtube").mouseover(function(){
+		this.style.cursor = 'pointer'
+	});
+	
+	$("#ins-ch").click(function(){
+		var win = window.open('https://www.instagram.com/liliwish/', '_blank');
+		win.focus();
+	});
+	
+	$("#ins-ch").mouseover(function(){
+		this.style.cursor = 'pointer'
+	});
+	
+	$("#weibo-ch").click(function(){
+		var win = window.open('https://weibo.com/liliwish/', '_blank');
+		win.focus();
+	});
+	
+	$("#weibo-ch").mouseover(function(){
+		this.style.cursor = 'pointer'
+	});
+	
+	$("#youtube-ch").click(function(){
+		var win = window.open('https://youtu.be/ZKt5ch6Y9gE/', '_blank');
+		win.focus();
+	});
+	
+	$("#youtube-ch").mouseover(function(){
+		this.style.cursor = 'pointer'
+	});
 	
 	
 	
