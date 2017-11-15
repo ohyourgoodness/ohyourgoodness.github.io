@@ -1,10 +1,14 @@
 $( document ).ready(function() {
 	
-	
-	$("nav").find("li").on("click", "a", function () {
-        $('.navbar-collapse.in').collapse('hide');
-    });
-	
+
+	$(".navbar-nav li a").click(function (event) {
+    // check if window is small enough so dropdown is created
+		var toggle = $(".navbar-toggle").is(":visible");
+		if (toggle) {
+		  $(".navbar-collapse").collapse('hide');
+		}
+	  });
+  
 	
 	setInterval(function() {
 		 var curSrc= $("#profilePic").attr("src");
