@@ -1,6 +1,11 @@
 $( document ).ready(function() {
 	
 	
+	$("nav").find("li").on("click", "a", function () {
+        $('.navbar-collapse.in').collapse('hide');
+    });
+	
+	
 	setInterval(function() {
 		 var curSrc= $("#profilePic").attr("src");
 		 if(curSrc === "http://www.liliwish.com/image/profilePic1.JPG"){
