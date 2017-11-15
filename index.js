@@ -81,9 +81,7 @@ $( document ).ready(function() {
 		  
 	}, 5000);
 	
-	
 
-	
 
 	$( "#nav-language" ).click(function() {
 		
