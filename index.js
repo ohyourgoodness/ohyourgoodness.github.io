@@ -88,6 +88,7 @@ $( document ).ready(function() {
 		$( "#english-container" ).toggle();
 		
 		if($('#chinese-container').is(':visible')) {
+			$( "#nav-me" ).html("我");
 			$( "#nav-music" ).html("音乐");
 			$( "#nav-acting" ).html("演戏");
 			$( "#nav-modeling" ).html("模特");
@@ -104,6 +105,7 @@ $( document ).ready(function() {
 			}
 			
 		}else{
+			$( "#nav-me" ).html("About Me");
 			$( "#nav-music" ).html("Music");
 			$( "#nav-acting" ).html("Acting");
 			$( "#nav-modeling" ).html("Modeling");
