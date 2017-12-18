@@ -259,7 +259,7 @@ $( document ).ready(function() {
 	
 	var gridWidth = $('#gridWidth').outerWidth(true);
 	
-	console.log("gridWidth = " + gridWidth);
+	//console.log("gridWidth = " + gridWidth);
 	
 	var gridWidthChNew = gridWidth * 0.9;
 	
