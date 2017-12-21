@@ -1,5 +1,20 @@
 $( document ).ready(function() {
 	
+	
+	var wn=window.navigator;
+	var href=location.href;
+	console.log("wn.systemLanguage = " + wn.systemLanguage);
+	
+	if ((wn.systemLanguage=="zh-cn" || wn.language=="zh-CN") && href.indexOf("id=191")==-1) { 
+	    //window.location = "http://www.zhongda.com/index.php?id=191"; 
+		console.log("chinese");
+	} 
+	else if ((wn.systemLanguage=="en" || wn.language=="zh-EN") && href.indexOf("id=471")==-1) {
+		//window.location = "http://www.zhongda.com/index.php?id=471"; 
+		console.log("english");
+	}
+
+	
 
 	$(".navbar-nav li a").click(function (event) {
     // check if window is small enough so dropdown is created
