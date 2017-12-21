@@ -77,6 +77,11 @@ $( document ).ready(function() {
 	
 
 	$(".navbar-nav li a").click(function (event) {
+
+		document.getElementById("wangyiMusicListDiv").innerHTML = "";
+		document.getElementById("wangyiMusicListDiv").innerHTML = "<iframe id = \"wangyiMusicList\" frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=100% height=450 src=\"//music.163.com/outchain/player?type=1&id=35737218&auto=0&height=430\"></iframe>";
+		
+	
     // check if window is small enough so dropdown is created
 		var toggle = $(".navbar-toggle").is(":visible");
 		if (toggle) {
