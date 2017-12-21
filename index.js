@@ -3,16 +3,72 @@ $( document ).ready(function() {
 	
 	var wn=window.navigator;
 	var href=location.href;
-	console.log("wn.systemLanguage = " + wn.systemLanguage);
+	if((wn.languages[0]=="zh" || wn.languages[0]=="zh-CN" || wn.languages[1]=="zh" || wn.languages[1]=="zh-CN") && href.indexOf("id=191")==-1){
+		console.log("china");
+		$( "#chinese-container" ).toggle();
+		$( "#english-container" ).toggle();
+		
+		if($('#chinese-container').is(':visible')) {
+			$( "#nav-me" ).html("我");
+			$( "#nav-music" ).html("音乐");
+			$( "#nav-acting" ).html("演戏");
+			$( "#nav-modeling" ).html("模特");
+			$( "#nav-language" ).html("English");
+			
+			
+			$("#nav-me").attr("href", "#meSection-ch");
+			$("#nav-music").attr("href", "#musicSection-ch");
+			$("#nav-acting").attr("href", "#actingSection-ch");
+			
+			var youtube = document.querySelectorAll( ".youtube" );
+			for (var i = 0; i < youtube.length; i++) {
+				if(youtube[i].firstChild.localName === "iframe"){
+					$( "#" + youtube[i].id+"-iframe" )[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+				}
+			}
+			
+		}else{
+			$( "#nav-me" ).html("About Me");
+			$( "#nav-music" ).html("Music");
+			$( "#nav-acting" ).html("Acting");
+			$( "#nav-modeling" ).html("Modeling");
+			$( "#nav-language" ).html("中文");
+			
+			$("#nav-me").attr("href", "#meSection");
+			$("#nav-music").attr("href", "#musicSection");
+			$("#nav-acting").attr("href", "#actingSection");
+
+			
+		/*	$("#video-panda-ch-youku").attr('src',''); 
+			$('#video-panda-ch-playbutton').show();
+		    $('#video-panda-ch-thumbnail').show();
+		    $('#video-panda-ch').show();
+            $("#video-panda-ch-youku").hide();			
+		*/
+
+
+			var youku = document.querySelectorAll( ".youku" );
 	
-	if ((wn.systemLanguage=="zh-cn" || wn.language=="zh-CN") && href.indexOf("id=191")==-1) { 
+			for (var i = 0; i < youku.length; i++) {
+					
+				console.log("youku[i].id = " + youku[i].id);
+					
+				$('#' + youku[i].id + '-youku').attr('src',''); 
+				$('#' + youku[i].id + '-playbutton').show();
+				$('#' + youku[i].id + '-thumbnail').show();
+				$('#' + youku[i].id ).show();
+				$('#' + youku[i].id + '-youku').hide();
+
+			}
+
+		}
+	}else {
+		//if ((wn.languages[0]=="en-US" || wn.languages[0]="en" || wn.languages[1]=="en-US" || wn.languages[1]="en") && href.indexOf("id=471")==-1) { 
 	    //window.location = "http://www.zhongda.com/index.php?id=191"; 
-		console.log("chinese");
-	} 
-	else if ((wn.systemLanguage=="en" || wn.language=="zh-EN") && href.indexOf("id=471")==-1) {
-		//window.location = "http://www.zhongda.com/index.php?id=471"; 
 		console.log("english");
-	}
+	} 
+	//else if ((wn.systemLanguage=="en" || wn.language=="zh-EN") && href.indexOf("id=191")==-1) {
+	
 
 	
 
